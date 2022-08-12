@@ -1,0 +1,61 @@
+
+
+<html>
+    <head>
+        <title>
+            Issue Tracker
+        </title>
+        <script src="https://kit.fontawesome.com/d76b9d75bf.js" crossorigin="anonymous"></script>
+        <!-- our css must be below other styles  -->
+        <link rel="stylesheet" href="/css/home.css">
+        
+    </head>
+
+    <body>
+
+        <nav style="font-family: cursive;">
+            
+            <h1 id="page-heading">
+                PROJECTS
+            </h1>
+            <h4>
+                <a href="/create-project" id="create-project">Create Project</a>
+            </h4>
+
+        </nav>
+
+        <div id="projects-list-container">
+            <ul class="lists">
+                <% for (let i of project_list) { %>
+
+                    
+
+                        <ul class="project">
+                            <a href="/project-detail/?id=<%= i._id %>">
+                                <div class="details">
+                                    <p> <b>Project: </b><%= i.name %></p>
+                                    <p> <b>Description: </b><%= i.description %></p>
+                                    <p> <b>Author: </b><%= i.author %></p>
+                                </div>
+                            
+                            <div class="delete-button">
+                                <a href="/delete-project/?id=<%= i._id %>">
+                                    <i class="fas fa-window-close"></i>
+                                </a>
+                            </div>
+                            </a>
+                        </ul>
+
+
+                    
+                    
+                <%} %>
+            </ul>
+        </div>
+
+
+
+
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>

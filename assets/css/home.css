@@ -1,0 +1,54 @@
+
+nav{
+    width: 70vw;
+    margin-left: 15vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#projects-list-container{
+    width: 50vw;
+    margin-left: 22vw;
+}
+
+.project{
+    
+    background-color: rgb(207, 207, 189);
+    box-shadow: 4px 4px 2px 2px rgb(182, 155, 155);
+    border-radius: 1vh;
+    padding-top: 0.2vh;
+    padding-bottom: 1vh;
+    margin-bottom: 2vh;
+    position: relative;
+    transition: all ease-in 150ms;
+}
+
+.project:hover{
+    cursor: pointer;
+    background-color: rgb(194, 192, 174);
+    border-radius: 1vh;
+    transform: scale(1.1,1.1);
+}
+#create-project{
+    text-decoration: none;
+    background-color: rgb(90, 89, 80);
+    padding: 1vh;
+    border-radius: 1vh;
+    color: white;
+    box-shadow: 4px 4px 4px 4px rgb(192, 192, 185);
+}
+
+.project > a {
+    text-decoration: none;
+    color: black;
+}
+
+.delete-button{
+    position: absolute;
+    top: 18%;
+    right: 10%;
+    transform: scale(1.5,1.5);
+}
+.delete-button i{
+    color: white;
+}

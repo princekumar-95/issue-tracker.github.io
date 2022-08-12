@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>
+            <%= project_info.name %>
+        </title>
+        <script src="https://kit.fontawesome.com/d76b9d75bf.js" crossorigin="anonymous"></script>
+        <!-- our css must be below other styles  -->
+        <link rel="stylesheet" href="/css/project_detail.css">
+        
+    </head>
+
+    <body>
+        <nav>
+            
+            <h1 id="page-heading">
+                <%= project_info.name %>
+                <a href="/" style="text-decoration: none; color: black; font-size: xx-small;">HOME</a>
+                
+            </h1>
+            <h4 >
+                <a href="/create-issue/?id=<%= project_info._id%>" id="create-issue">Create Issue/Bug</a>
+            </h4>
+
+        </nav>
+
+        
+            <form id="filter-search-container" action="/project-detail/?id=<%= project_info._id%>" method="POST">
+                <div id="search">
+                    <input type="text" name="title" placeholder="Search by title"><br>
+                </div>
+                <div id="filterByAuthor" >
+                    <%if(issues.length > 0){%>
+                        <input id="filterByAuthor" list="labels" name="filterByAuthor" placeholder="Filter by author"><br>
+                        <datalist id="labels">
+                            <% for(let i of issues){%>
+                                <option value="<%= i.author %>">
+                            <%}%>
+                        </datalist>
+                    <%}%>
+                </div>
+                <div id="filterByLabel">
+                    <%if(issues.length > 0){%>
+                        <select id="lab" name="filterByLabel" multiple size="2">
+                            <% for(let i of issues){%>
+                                <option value="<%= i.label %>"><%= i.label %></option>
+                            <%}%>
+                        </select>
+                    <%}%>
+                </div>
+                <div id="apply-btn">
+                    <button> Apply</button>
+                </div>
+                
+            </form>
+        
+
+        <div id="details">
+            <div id="details-d-a">
+                <p> <b>Project Description: </b><%= project_info.description %></p>
+                <p> <b>Project Author: </b><%= project_info.author %></p>
+            </div>
+            <div id="details-i">
+                <% if(issues.length > 0){%>
+                    <h2 style="text-align: center;">Issues/Bugs</h2>
+    
+                    <% for(var i of issues){%>
+                        <ul id="details-i-issue">
+                            
+                            <h3> Bug title: <%= i.title %>  </h3>
+                            <p> Bug description: <%= i.description %> </p>
+                            <p> Bug label: <%= i.label %> </p>
+                            <p> Bug author: <%= i.author %> </p>
+                            <a id="delete-issue" href="/delete-issue/?id=<%= i._id %>"> Delete </a>
+    
+                        </ul>
+                    <%}%>
+    
+                <%} else {%>
+                    <p> <b>Issues: </b>No bugs/issues added yet</p>                
+                <%}%>
+            </div>    
+        </div>
+
+        <script type="text/javascript" src=""></script>
+    </body>
+</html>

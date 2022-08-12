@@ -1,0 +1,52 @@
+body{
+    margin-top: 5vh;
+    font-family: cursive;
+}
+#page-heading{
+    width: 15vw;
+    margin-left: 43vw;
+}
+#new-project-form{
+    margin-top: 10vh;
+    width: 40vw;
+    margin-left: 30vw;
+    border-radius: 1vh;
+    background-color: rgb(194, 192, 174);
+    box-shadow: 4px 4px 2px 2px rgb(182, 155, 155);
+    padding: 2vh;
+}
+#name{
+    width: 40vw;
+    height: 5vh;
+    border-radius: 1vh;
+    border: 2px solid rgb(194, 192, 174);
+    background-color: rgb(207, 207, 189);
+    
+    box-shadow: 2px 2px 2px 2px rgb(182, 155, 155);
+}
+#description{
+    width: 40vw;
+    height: 5vh;
+    border-radius: 1vh;
+    border: 2px solid rgb(194, 192, 174);
+    background-color: rgb(207, 207, 189);
+    box-shadow: 2px 2px 2px 2px rgb(182, 155, 155);
+
+}
+#author{
+    width: 40vw;
+    height: 5vh;
+    border-radius: 1vh;
+    border: 2px solid rgb(194, 192, 174);
+    background-color: rgb(207, 207, 189);
+    box-shadow: 2px 2px 2px 2px rgb(182, 155, 155);
+
+}
+#submit-btn{
+    border-radius: 1vh;
+    /* border: rgb(207, 207, 189); */
+    background-color: rgb(142, 187, 142);
+}
+#submit-btn:hover{
+    cursor: pointer;
+}

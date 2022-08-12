@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Create Project
+        </title>
+        <script src="https://kit.fontawesome.com/d76b9d75bf.js" crossorigin="anonymous"></script>
+        <!-- our css must be below other styles  -->
+        <link rel="stylesheet" href="/css/create_project.css">
+        
+    </head>
+
+    <body>
+        <h1 id="page-heading">
+            Create Project
+        </h1>
+
+        <form id="new-project-form" action="/created-project" method="POST">
+            <input id="name" type="text" name="name" placeholder="Project Name" required><br><br>
+            <input id="description" type="text" name="description" placeholder="Description" required><br><br>
+            <input id="author" type="text" name="author" placeholder="Author" required><br><br>
+            <button id="submit-btn" type="submit"> Add Project</button>
+        </form>
+
+
+        <script type="text/javascript" src=""></script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#new-issue-form{
+    margin-top: 6vh;
+    width: 40vw;
+    margin-left: 30vw;
+    border-radius: 1vh;
+    background-color: rgb(194, 192, 174);
+    box-shadow: 4px 4px 2px 2px rgb(182, 155, 155);
+    padding: 2vh;
+}
+
+#title{
+    width: 40vw;
+    height: 5vh;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    border: 2px solid rgb(194, 192, 174);
+    background-color: rgb(207, 207, 189);
+    box-shadow: 2px 2px 2px 2px rgb(182, 155, 155);
+}
+#description{
+    width: 40vw;
+    height: 5vh;
+    border-radius: 1vh;
+    border: 2px solid rgb(194, 192, 174);
+    background-color: rgb(207, 207, 189);
+    box-shadow: 2px 2px 2px 2px rgb(182, 155, 155);
+    margin-bottom: 1vh;
+}
+#label{
+    width: 40vw;
+    height: 5vh;
+    border-radius: 1vh;
+    border: 2px solid rgb(194, 192, 174);
+    background-color: rgb(207, 207, 189);
+    box-shadow: 2px 2px 2px 2px rgb(182, 155, 155);
+    margin-bottom: 1vh;
+}
+#author{
+    width: 40vw;
+    height: 5vh;
+    border-radius: 1vh;
+    border: 2px solid rgb(194, 192, 174);
+    background-color: rgb(207, 207, 189);
+    box-shadow: 2px 2px 2px 2px rgb(182, 155, 155);
+    margin-bottom: 1vh;
+}
+#submit-btn{
+    border-radius: 1vh;
+    background-color: rgb(142, 187, 142);
+    margin-bottom: 1vh;
+}
+#submit-btn:hover{
+    cursor: pointer;
+}
